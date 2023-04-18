@@ -1,0 +1,206 @@
+* {
+    font-family: 'DotGothic16',  'Courier New', Courier, monospace;
+    }
+    
+    h1 {
+        margin: 50px 0 0 20px;
+    }
+    
+    p {
+        margin: 5px 0 50px 20px;
+    }
+    
+    nav {
+        background: black;
+        height: 75px;
+        width: 100%;
+    }
+    
+    label.logo {
+        color: white;
+        font-size: 15px;
+        line-height: 75px;
+        margin: 0 0 0 20px;
+    }
+    
+    nav ul {
+        float: right;
+        margin: 0 20px 0 0;
+        padding-right: 50px;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        line-height: 75px;
+        margin: 0 10px;
+    }
+    
+    nav ul li a {
+        color: white;
+        font-size: 15px;
+    }
+    
+    a.active, a:hover {
+        color: rgba(255, 255, 255, 0.5);
+        transition: 0.2s;
+    }
+    
+    .container {
+        display: flex;
+        margin: 100px 0 0 0;
+    }
+    
+    .categories {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+        width: 100%;
+        background-color: black;
+        color: white;
+        height: 80px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    
+    .categories a {
+        color: white;
+    }
+    
+    a.categories, a:hover {
+        color: rgba(255, 255, 255, 0.5);
+        transition: 0.2s;
+    }
+    
+    
+    .resources ul li a {
+        color: black;
+        font-size: 15px;
+    }
+    
+    
+    .resources ul li a:hover {
+        color: rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+    }
+    
+    .resources ul li {
+        margin: 5px 0px;
+    }
+    
+    
+    
+    
+    /* Dark mode toggle */
+    
+    body {
+        transition: 0.4s;
+    }
+    
+    .input {
+        visibility: hidden;
+    }
+    
+    
+    .label {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 80px;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    
+    
+    .circle {
+        top: 25px;
+        right: 25px;
+        width: 34px;
+        background-color: rgb(0, 0, 0);
+        height: 34px;
+        border-radius: 50%;
+        top: 3px;
+        position: absolute;
+        left: 3px;
+        animation: toggleOff 0.4s linear forwards;
+    }
+    
+    
+    .input:checked + .label {
+        background-color: rgb(0, 0, 0);
+    }
+    
+    .input:checked + .label .circle {
+        animation: toggleOn 0.4s linear forwards; 
+        background-color: rgb(255, 255, 255);
+    }
+    
+    /* Dark mode styling */
+
+    .dark-mode {
+        background-color: black;
+        color: white;
+      }
+    
+
+      .dark-mode nav {
+        background-color: white;
+      }
+      
+      .dark-mode label.logo {
+        color: black;
+      }
+      
+      .dark-mode nav ul li a {
+        color: black;
+      }
+      
+      .dark-mode .categories {
+        background-color: white;
+        color: black;
+      }
+
+      .dark-mode .categories a {
+        color: black;
+      }
+
+      .dark-mode a.active, a:hover {
+        color: rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+      }
+      
+      .dark-mode a.categories, .dark-mode a:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .dark-mode .resources ul li a {
+        color: white;
+      }
+      
+      .dark-mode .resources ul li a:hover {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+
+      
+
+    @keyframes toggleOn {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(40px);
+        }
+    }
+    
+    @keyframes toggleOff {
+        0% {
+            transform: translateX(40px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
